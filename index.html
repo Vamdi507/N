@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat HTML</title>
+</head>
+<body>
+    <h1>Chat en HTML</h1>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
+        <button onclick="enviarMensaje()">Enviar</button>
+    </div>
+
+    <script>
+        function enviarMensaje() {
+            const mensaje = document.getElementById("message-input").value;
+            // Aquí puedes agregar lógica para enviar el mensaje a un servidor o procesarlo localmente
+            // Por ahora, simplemente mostraremos el mensaje en la página
+            const chatMessages = document.getElementById("chat-messages");
+            chatMessages.innerHTML += `<p>Tú: ${mensaje}</p>`;
+            document.getElementById("message-input").value = ""; // Limpiar el campo de entrada
+        }
+    </script>
+</body>
+</html>
